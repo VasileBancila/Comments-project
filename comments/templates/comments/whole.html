@@ -1,0 +1,22 @@
+{% extends 'comments/base.html' %}
+
+{% block content %}
+
+{% if comment %}
+    <table class="table w-50 table-striped table-hover border border-black">
+        <thead>
+            <tr class="table-danger table-active">
+                <th scope="col">Full comment</th>
+            </tr>
+        </thead>
+        <tbody class="table table-hover">
+            <tr class="table-success">
+                <td>{{ comment|linebreaksbr }}</td>
+            </tr>
+        </tbody>
+    </table><br>
+{% else %}
+    <p scope="row">Comentariul nu există</p>
+{% endif %}
+
+{% endblock %}
