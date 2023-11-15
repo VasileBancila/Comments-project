@@ -10,7 +10,7 @@
     <tbody class="table table-hover">
         {% if comments %}
         {% for comment in comments %}
-        <tr class="table-success">
+        <tr class="table-secondary">
             <td><a href="{% url 'whole' comment.id %}">{{ comment.comment|truncatechars:60|linebreaksbr }}</a></td>
         </tr>
         {% endfor %}
